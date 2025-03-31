@@ -16,7 +16,8 @@ jobs:
         uses: actions/checkout@v4
 
       - name: File modification 
-        run: echo "Last update: $(date)" >> last-update.txt
+        run: |
+          echo "Last update: $(date)" >> last-update.txt
 
       - name: Auto commit
         uses: stefanzweifel/git-auto-commit-action@v5
